@@ -12,6 +12,7 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -256,21 +257,103 @@
     <div id="overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity"></div>
 
     <!-- about  -->
-     
+    <section class="section-padding bg-white overflow-hidden">
+        <div class="container">
+            <div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-[32px] lg:gap-16 items-start">
+
+                    <div class="lg:col-span-5 about-image-col">
+                        <img src="assets/images/about-image.webp" alt="Rifat Working"
+                            class="w-full h-auto object-cover shadow-sm">
+                    </div>
+
+                    <div class="lg:col-span-7 about-content-col flex flex-col lg:gap-6">
+
+                        <h3 class="anton lg:text-[32px] font-normal leading-[100%] text-primary">
+                            WHO AM I ?
+                        </h3>
+                        <div class="w-full h-[1px]"></div>
+                        <h2 class="scrub-text anton text-[28px] md:text-[38px] lg:text-[42px] leading-[1.1] uppercase">
+                            A passionate UI/UX designer committed to blending creativity with user-focused design,
+                            crafting seamless digital experiences that captivate and engage. Skilled in translating
+                            concepts into visually striking and intuitive interfaces that leave a lasting impact.
+                        </h2>
+
+                        <p
+                            class="about-desc text-gray-500 text-[16px] md:text-[18px] leading-relaxed mt-6 pr-4 lg:pr-10">
+                            I believe great design is invisible-it just works. My approach combines research, empathy,
+                            and creativity to build experiences that not only look beautiful but also drive real
+                            business results.
+                        </p>
+
+                        <div class="mt-6">
+                            <a href="#"
+                                class="about-btn inline-flex bg-[#FF6200] text-white anton text-[16px] uppercase px-8 py-3.5 shadow-[0_8px_20px_-6px_rgba(255,98,0,0.5)] hover:bg-[#e55800] transition-colors">
+                                VIEW WORKS
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 lg:mt-24">
+
+                    <div class="stat-card bg-white p-6 shadow-sm border border-gray-100">
+                        <h3 class="anton text-[40px] md:text-[48px] leading-[0.9] uppercase text-[#111827]">
+                            140+<br>PROJECTS</h3>
+
+                        <div class="w-full h-px bg-gray-200 my-4"></div>
+
+                        <h4 class="text-[18px] font-bold text-[#111827] leading-snug">Website & App design</h4>
+                        <p class="text-gray-500 text-[14px] leading-relaxed mt-1">Empowering brands to stand out
+                            globally.</p>
+                    </div>
+
+                    <div class="stat-card bg-white p-6 shadow-sm border border-gray-100">
+                        <h3 class="anton text-[40px] md:text-[48px] leading-[0.9] uppercase text-[#111827]">
+                            140+<br>CLIENTS</h3>
+
+                        <div class="w-full h-px bg-gray-200 my-4"></div>
+
+                        <h4 class="text-[18px] font-bold text-[#111827] leading-snug">100% Client Satisfaction rate</h4>
+                        <p class="text-gray-500 text-[14px] leading-relaxed mt-1">I build lasting partnerships with
+                            proven results.</p>
+                    </div>
+
+                    <div class="stat-card bg-white p-6 shadow-sm border border-gray-100">
+                        <h3 class="anton text-[40px] md:text-[48px] leading-[0.9] uppercase text-[#111827]">
+                            10+<br>EXPERIENCE</h3>
+
+                        <div class="w-full h-px bg-gray-200 my-4"></div>
+
+                        <h4 class="text-[18px] font-bold text-[#111827] leading-snug">Over Decade experience</h4>
+                        <p class="text-gray-500 text-[14px] leading-relaxed mt-1">Years of expertise in crafting
+                            impactful digital solutions.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
 
 
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // Ensure ScrollTrigger is registered safely
+            if (typeof ScrollTrigger !== "undefined") {
+                gsap.registerPlugin(ScrollTrigger);
+            }
 
             /* =========================================
-               PAGE LOAD INTRO ANIMATIONS (GSAP)
+               1. PAGE LOAD INTRO ANIMATIONS (HERO)
             ========================================= */
             gsap.set(".visibility-hidden-on-load", { autoAlpha: 1 });
 
             const introTl = gsap.timeline({ delay: 0.5 });
-
             introTl
                 .from("#logoBlock", { y: -30, opacity: 0, duration: 1.2, ease: "power2.out" })
                 .from(".hero-text-anim", { y: 30, opacity: 0, duration: 1.0, stagger: 0.15, ease: "power2.out" }, "-=0.8")
@@ -278,9 +361,8 @@
                 .from(".social-icon-anim", { x: 30, opacity: 0, duration: 1.0, stagger: 0.1, ease: "power2.out" }, "-=0.8")
                 .from(".bottom-block-anim", { y: 20, opacity: 0, duration: 1.0, stagger: 0.15, ease: "power2.out" }, "-=0.6");
 
-
             /* =========================================
-               MENU INTERACTIONS
+               2. MENU INTERACTIONS
             ========================================= */
             const desktopBtn = document.getElementById('desktopMenuBtn');
             const closeBtn = document.getElementById('closeBtn');
@@ -288,100 +370,148 @@
             const overlay = document.getElementById('overlay');
             let isMenuOpen = false;
 
-            const menuTl = gsap.timeline({ paused: true });
+            if (desktopBtn && sideMenu && overlay) {
+                const menuTl = gsap.timeline({ paused: true });
+                menuTl
+                    .to(overlay, { opacity: 1, duration: 0.3, onStart: () => overlay.classList.remove('hidden') }, 0)
+                    .to(".line1", { y: 6, rotation: 45, duration: 0.3, ease: "power2.inOut" }, 0)
+                    .to(".line2", { opacity: 0, duration: 0.3 }, 0)
+                    .to(".line3", { y: -6, rotation: -45, duration: 0.3, ease: "power2.inOut" }, 0)
+                    .to(sideMenu, { x: 0, duration: 0.5, ease: "power4.out" }, ">")
+                    .fromTo(".nav-item",
+                        { x: 50, opacity: 0 },
+                        { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" },
+                        "-=0.2"
+                    );
 
-            menuTl
-                .to(overlay, { opacity: 1, duration: 0.3, onStart: () => overlay.classList.remove('hidden') }, 0)
-                .to(".line1", { y: 6, rotation: 45, duration: 0.3, ease: "power2.inOut" }, 0)
-                .to(".line2", { opacity: 0, duration: 0.3 }, 0)
-                .to(".line3", { y: -6, rotation: -45, duration: 0.3, ease: "power2.inOut" }, 0)
-                .to(sideMenu, { x: 0, duration: 0.5, ease: "power4.out" }, ">")
-                .fromTo(".nav-item",
-                    { x: 50, opacity: 0 },
-                    { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" },
-                    "-=0.2"
-                );
+                const openMenu = () => { isMenuOpen = true; menuTl.play(); };
+                const closeMenu = () => {
+                    isMenuOpen = false;
+                    menuTl.reverse().then(() => {
+                        if (!isMenuOpen) overlay.classList.add('hidden');
+                    });
+                };
 
-            const openMenu = () => {
-                isMenuOpen = true;
-                menuTl.play();
-            };
-
-            const closeMenu = () => {
-                isMenuOpen = false;
-                menuTl.reverse().then(() => {
-                    if (!isMenuOpen) overlay.classList.add('hidden');
-                });
-            };
-
-            desktopBtn.addEventListener('click', () => isMenuOpen ? closeMenu() : openMenu());
-            closeBtn.addEventListener('click', closeMenu);
-            overlay.addEventListener('click', closeMenu);
-
+                desktopBtn.addEventListener('click', () => isMenuOpen ? closeMenu() : openMenu());
+                if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+                overlay.addEventListener('click', closeMenu);
+            }
 
             /* =========================================
-               IMAGE FLASH EFFECT & CUSTOM CURSOR LOGIC
+               3. CUSTOM CURSOR & IMAGE FLASH LOGIC
             ========================================= */
             const logoBlock = document.getElementById('logoBlock');
             const heroImageHoverArea = document.getElementById('heroImageHoverArea');
 
-            // For Custom Cursor Clone
-            const cursorClone = logoBlock.cloneNode(true);
-            cursorClone.id = 'logoCursorClone';
+            if (logoBlock && heroImageHoverArea) {
+                const cursorClone = logoBlock.cloneNode(true);
+                cursorClone.id = 'logoCursorClone';
 
-            Object.assign(cursorClone.style, {
-                position: 'fixed',
-                top: '0',
-                left: '0',
-                pointerEvents: 'none',
-                zIndex: '9999',
-                opacity: '0',
-                display: 'none',
-                transformOrigin: 'center center'
-            });
-
-            const allChildren = cursorClone.querySelectorAll('*');
-            allChildren.forEach(child => {
-                child.style.pointerEvents = 'none';
-            });
-
-            cursorClone.classList.add('shadow-xl', 'rounded-lg');
-            document.body.appendChild(cursorClone);
-
-            let xTo = gsap.quickTo(cursorClone, "x", { duration: 0.15, ease: "power3.out" }),
-                yTo = gsap.quickTo(cursorClone, "y", { duration: 0.15, ease: "power3.out" });
-
-            window.addEventListener("mousemove", (e) => {
-                if (cursorClone.style.display !== 'none') {
-                    xTo(e.clientX);
-                    yTo(e.clientY);
-                }
-            });
-
-            heroImageHoverArea.addEventListener("mouseenter", (e) => {
-                // Flash Effect on Image
-                // This momentarily increases brightness and then fades back to normal
-                gsap.fromTo(heroImageHoverArea,
-                    { filter: "brightness(1.5) contrast(1.1)" },
-                    { filter: "brightness(1) contrast(1)", duration: 0.8, ease: "power2.out" }
-                );
-
-                // Cursor Effect Enter
-                cursorClone.style.display = 'flex';
-                gsap.set(cursorClone, { x: e.clientX, y: e.clientY, xPercent: -50, yPercent: -50 });
-                gsap.to(cursorClone, { opacity: 1, scale: 1, duration: 0.3 });
-            });
-
-            heroImageHoverArea.addEventListener("mouseleave", () => {
-                // Cursor Effect Leave
-                gsap.to(cursorClone, {
-                    opacity: 0,
-                    scale: 0.9,
-                    duration: 0.3,
-                    onComplete: () => { cursorClone.style.display = 'none'; }
+                Object.assign(cursorClone.style, {
+                    position: 'fixed',
+                    top: '0',
+                    left: '0',
+                    pointerEvents: 'none',
+                    zIndex: '9999',
+                    opacity: '0',
+                    display: 'none',
+                    transformOrigin: 'center center'
                 });
-            });
 
+                cursorClone.querySelectorAll('*').forEach(child => child.style.pointerEvents = 'none');
+                cursorClone.classList.add('shadow-xl', 'rounded-lg');
+                document.body.appendChild(cursorClone);
+
+                let xTo = gsap.quickTo(cursorClone, "x", { duration: 0.15, ease: "power3.out" }),
+                    yTo = gsap.quickTo(cursorClone, "y", { duration: 0.15, ease: "power3.out" });
+
+                window.addEventListener("mousemove", (e) => {
+                    if (cursorClone.style.display !== 'none') {
+                        xTo(e.clientX);
+                        yTo(e.clientY);
+                    }
+                });
+
+                heroImageHoverArea.addEventListener("mouseenter", (e) => {
+                    // Flash Effect on Image
+                    gsap.fromTo(heroImageHoverArea,
+                        { filter: "brightness(1.5) contrast(1.1)" },
+                        { filter: "brightness(1) contrast(1)", duration: 0.8, ease: "power2.out" }
+                    );
+
+                    // Cursor Show
+                    cursorClone.style.display = 'flex';
+                    gsap.set(cursorClone, { x: e.clientX, y: e.clientY, xPercent: -50, yPercent: -50 });
+                    gsap.to(cursorClone, { opacity: 1, scale: 1, duration: 0.3 });
+                });
+
+                heroImageHoverArea.addEventListener("mouseleave", () => {
+                    // Cursor Hide
+                    gsap.to(cursorClone, {
+                        opacity: 0,
+                        scale: 0.9,
+                        duration: 0.3,
+                        onComplete: () => { cursorClone.style.display = 'none'; }
+                    });
+                });
+            }
+
+            /* ==============================================================
+               4. ABOUT SECTION SCROLL ANIMATIONS
+            ============================================================== */
+            const scrubTextElement = document.querySelector('.scrub-text');
+
+            if (scrubTextElement) {
+                const words = scrubTextElement.innerText.split(' ');
+                scrubTextElement.innerHTML = '';
+
+                words.forEach(word => {
+                    const span = document.createElement('span');
+                    span.innerText = word + ' ';
+                    span.style.color = '#D1D5DB';
+                    scrubTextElement.appendChild(span);
+                });
+
+                const spans = scrubTextElement.querySelectorAll('span');
+
+                gsap.to(spans, {
+                    color: '#111827',
+                    stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: '.about-content-col',
+                        start: "top 75%",
+                        end: "bottom 50%",
+                        scrub: 1,
+                    }
+                });
+            }
+
+            const aboutSection = document.querySelector(".about-section");
+            if (aboutSection) {
+                const sectionTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".about-section",
+                        start: "top 70%",
+                    }
+                });
+
+                sectionTl
+                    .from(".about-image-col", { x: -50, opacity: 0, duration: 1.2, ease: "power3.out" })
+                    .from([".about-content-col h3", ".about-desc", ".about-btn"], {
+                        y: 30,
+                        opacity: 0,
+                        duration: 1,
+                        stagger: 0.15,
+                        ease: "power2.out"
+                    }, "-=0.8")
+                    .from(".stat-card", {
+                        y: 60,
+                        opacity: 0,
+                        duration: 1,
+                        stagger: 0.2,
+                        ease: "power3.out"
+                    }, "-=0.6");
+            }
         });
     </script>
 </body>
