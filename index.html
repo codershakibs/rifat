@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="relative text-textDark">
-
+<body class="relative">
+    <!-- header  -->
     <header class="z-40 lg:px-4 lg:px-12 py-6 bg-gray-200">
         <div class="container">
             <div class="flex justify-between items-center w-full">
-                <div class="flex items-center gap-2.5 bg-white pr-4">
+                <div id="logoBlock" class="visibility-hidden-on-load flex items-center gap-2.5 bg-white pr-4">
                     <img class="p-px bg-white" src="assets/images/rifat-logo-img.png" alt="Rifat">
                     <span class="anton text-black text-2xl font-normal leading-[116.667%] uppercase">Rifat
                         Hossain</span>
@@ -39,26 +39,30 @@
         </div>
     </header>
 
+    <!-- hero  -->
+
     <main>
         <section class="bg-gray-200 relative">
             <div class="container">
                 <div class="pt-8 lg:pt-0">
                     <div class="flex lg:gap-15 align-baseline relative">
                         <div class="flex flex-col lg:gap-6 gap-4 lg:pt-[94px] pb-14 lg:pb-0">
-                            <p class="anton lg:text-[32px] text-2xl text-gray-600 font-normal leading-[100%] uppercase">
-                                Hey I'm
-                                Rifat Hossain</p>
+                            <p
+                                class="hero-text-anim visibility-hidden-on-load anton lg:text-[32px] text-2xl text-gray-600 font-normal leading-[100%] uppercase">
+                                Hey I'm Rifat Hossain
+                            </p>
                             <h1
-                                class="anton lg:text-[96px] md:text-6xl text-5xl font-normal leading-[100%] uppercase text-black-2">
+                                class="hero-text-anim visibility-hidden-on-load anton lg:text-[96px] md:text-6xl text-5xl font-normal leading-[100%] uppercase text-black-2">
                                 <span class="text-primary">Professional</span><br>
                                 Product &<br>
                                 Brand <span class="text-primary">Designer</span>
                             </h1>
-                            <p class="lg:text-[18px] font-normal leading-[138.889%] text-gray-600 lg:max-w-[600px] md:max-w-[550
-                            px]">
+                            <p
+                                class="hero-text-anim visibility-hidden-on-load lg:text-[18px] font-normal leading-[138.889%] text-gray-600 lg:max-w-[600px] md:max-w-[550px]">
                                 I help startups turn complex ideas into simple, scalable interfaces. From UX flows to
                                 polished UI, I deliver designs that ship.
                             </p>
+
                             <div>
                                 <a href="#"
                                     class="bg-primary text-white font-bold uppercase inline-flex px-5 py-4 items-center gap-[10px] btn-box-shadow">
@@ -79,14 +83,18 @@
                                 </a>
                             </div>
                         </div>
+
                         <div>
-                            <img class="lg:mt-[-100px]" src="assets/images/hero-img.webp" alt="rifat">
+                            <img id="heroImageHoverArea"
+                                class="visibility-hidden-on-load lg:mt-[-100px] relative z-10 cursor-none transition-all"
+                                src="assets/images/hero-img.webp" alt="rifat">
                         </div>
+
                         <div
                             class="flex lg:flex-col lg:left-auto flex-row gap-4 absolute left-0 bottom-0 sm:right-0 lg:right-0 lg:bottom-0 bottom-[-16px]">
-                            <a href="#">
+                            <a href="#" class="social-icon-anim visibility-hidden-on-load block">
                                 <div
-                                    class="p-3 rounded-2xl border-2 border-white bg-primary inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
+                                    class="p-3 rounded-2xl border-2 border-white bg-primary hover:bg-black transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2 hover:shadow-2xl inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_217_1915)">
@@ -107,9 +115,9 @@
                                     </svg>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="#" class="social-icon-anim visibility-hidden-on-load block">
                                 <div
-                                    class="p-3 rounded-2xl border-2 border-white bg-primary inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
+                                    class="p-3 rounded-2xl border-2 border-white bg-primary hover:bg-black transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2 hover:shadow-2xl inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -124,9 +132,9 @@
                                     </svg>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="#" class="social-icon-anim visibility-hidden-on-load block">
                                 <div
-                                    class="p-3 rounded-2xl border-2 border-white bg-primary inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
+                                    class="p-3 rounded-2xl border-2 border-white bg-primary hover:bg-black transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2 hover:shadow-2xl inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_217_1929)">
@@ -142,9 +150,9 @@
                                     </svg>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="#" class="social-icon-anim visibility-hidden-on-load block">
                                 <div
-                                    class="p-3 rounded-2xl border-2 border-white bg-primary inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
+                                    class="p-3 rounded-2xl border-2 border-white bg-primary hover:bg-black transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-2 hover:shadow-2xl inline-flex shadow-[0_12px_40px_-16px_rgba(23,105,255,0.70)]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                                         fill="none">
                                         <path
@@ -155,28 +163,29 @@
                             </a>
                         </div>
                     </div>
+
                     <div class="lg:pt-14 pt-14 lg:py-10 py-6 flex flex-col lg:flex-row lg:items-center">
-                        <div class="flex flex-col gap-2">
+                        <div class="bottom-block-anim visibility-hidden-on-load flex flex-col gap-2">
                             <p class="text-[16px] font-bold leading-[100%] text-black-3">USER-CENTERED DESIGN</p>
                             <p class="text-[14px] font-normal leading-[142.857%] text-gray-600">Intutive and engaging
                                 experiences tailored for your audience</p>
                         </div>
                         <div class="lg:w-[1px] w-full h-[1px] lg:h-[54px] bg-gray-300 my-4 lg:mx-10"></div>
-                        <div class="flex flex-col gap-2">
+                        <div class="bottom-block-anim visibility-hidden-on-load flex flex-col gap-2">
                             <p class="text-[16px] font-bold leading-[100%] text-black-3">BRAND IDENTITY & STRATEGY</p>
                             <p class="text-[14px] font-normal leading-[142.857%] text-gray-600">Strong visual
                                 storytelling that makes your brand unforgettable.</p>
                         </div>
                         <div class="lg:w-[1px] w-full h-[1px] lg:h-[54px] bg-gray-300 my-4 lg:mx-10"></div>
 
-                        <div class="flex flex-col gap-2">
+                        <div class="bottom-block-anim visibility-hidden-on-load flex flex-col gap-2">
                             <p class="text-[16px] font-bold leading-[100%] text-black-3">RESPONSIVE & MODERN UI</p>
                             <p class="text-[14px] font-normal leading-[142.857%] text-gray-600">Pixel-perfect designs
                                 optimized for all devices.</p>
                         </div>
                         <div class="lg:w-[1px] w-full h-[1px] lg:h-[54px] bg-gray-300 my-4 lg:mx-10"></div>
 
-                        <div class="flex flex-col gap-2">
+                        <div class="bottom-block-anim visibility-hidden-on-load flex flex-col gap-2">
                             <p class="text-[16px] font-bold leading-[100%] text-black-3">SEAMLESS PROTOTYPING</p>
                             <p class="text-[14px] font-normal leading-[142.857%] text-gray-600">Interactive mockups to
                                 bring ideas to life before development.</p>
@@ -186,6 +195,8 @@
             </div>
         </section>
     </main>
+
+    <!-- mobile Menu  -->
 
     <div id="sideMenu"
         class="fixed inset-y-0 right-0 w-full md:w-[450px] bg-gray-100 shadow-2xl z-50 transform translate-x-full border-l border-gray-200 flex flex-col">
@@ -242,63 +253,135 @@
             </p>
         </div>
     </div>
-
     <div id="overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity"></div>
+
+    <!-- about  -->
+     
+
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
-            // Elements
+            /* =========================================
+               PAGE LOAD INTRO ANIMATIONS (GSAP)
+            ========================================= */
+            gsap.set(".visibility-hidden-on-load", { autoAlpha: 1 });
+
+            const introTl = gsap.timeline({ delay: 0.5 });
+
+            introTl
+                .from("#logoBlock", { y: -30, opacity: 0, duration: 1.2, ease: "power2.out" })
+                .from(".hero-text-anim", { y: 30, opacity: 0, duration: 1.0, stagger: 0.15, ease: "power2.out" }, "-=0.8")
+                .from("#heroImageHoverArea", { y: -50, opacity: 0, duration: 1.2, ease: "power2.out" }, "-=0.8")
+                .from(".social-icon-anim", { x: 30, opacity: 0, duration: 1.0, stagger: 0.1, ease: "power2.out" }, "-=0.8")
+                .from(".bottom-block-anim", { y: 20, opacity: 0, duration: 1.0, stagger: 0.15, ease: "power2.out" }, "-=0.6");
+
+
+            /* =========================================
+               MENU INTERACTIONS
+            ========================================= */
             const desktopBtn = document.getElementById('desktopMenuBtn');
             const closeBtn = document.getElementById('closeBtn');
             const sideMenu = document.getElementById('sideMenu');
             const overlay = document.getElementById('overlay');
             let isMenuOpen = false;
 
-            // Create a master timeline for the menu opening sequence
             const menuTl = gsap.timeline({ paused: true });
 
             menuTl
-                // 1. Overlay fades in immediately
                 .to(overlay, { opacity: 1, duration: 0.3, onStart: () => overlay.classList.remove('hidden') }, 0)
-
-                // 2. Hamburger lines animate to X
                 .to(".line1", { y: 6, rotation: 45, duration: 0.3, ease: "power2.inOut" }, 0)
                 .to(".line2", { opacity: 0, duration: 0.3 }, 0)
                 .to(".line3", { y: -6, rotation: -45, duration: 0.3, ease: "power2.inOut" }, 0)
-
-                // 3. Side Menu slides in AFTER hamburger animation completes
                 .to(sideMenu, { x: 0, duration: 0.5, ease: "power4.out" }, ">")
-
-                // 4. Nav items stagger in AFTER menu starts sliding
                 .fromTo(".nav-item",
                     { x: 50, opacity: 0 },
                     { x: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" },
                     "-=0.2"
                 );
 
-
-            // Open Menu Function
             const openMenu = () => {
                 isMenuOpen = true;
                 menuTl.play();
             };
 
-            // Close Menu Function
             const closeMenu = () => {
                 isMenuOpen = false;
                 menuTl.reverse().then(() => {
-                    // Hide overlay only after reverse animation completes
                     if (!isMenuOpen) overlay.classList.add('hidden');
                 });
             };
 
-            // Event Listeners - Now only using desktopBtn for all screens
             desktopBtn.addEventListener('click', () => isMenuOpen ? closeMenu() : openMenu());
             closeBtn.addEventListener('click', closeMenu);
             overlay.addEventListener('click', closeMenu);
 
-            // Removed the broken GSAP navLinks rolling effect as the HTML structure for it was removed earlier.
+
+            /* =========================================
+               IMAGE FLASH EFFECT & CUSTOM CURSOR LOGIC
+            ========================================= */
+            const logoBlock = document.getElementById('logoBlock');
+            const heroImageHoverArea = document.getElementById('heroImageHoverArea');
+
+            // For Custom Cursor Clone
+            const cursorClone = logoBlock.cloneNode(true);
+            cursorClone.id = 'logoCursorClone';
+
+            Object.assign(cursorClone.style, {
+                position: 'fixed',
+                top: '0',
+                left: '0',
+                pointerEvents: 'none',
+                zIndex: '9999',
+                opacity: '0',
+                display: 'none',
+                transformOrigin: 'center center'
+            });
+
+            const allChildren = cursorClone.querySelectorAll('*');
+            allChildren.forEach(child => {
+                child.style.pointerEvents = 'none';
+            });
+
+            cursorClone.classList.add('shadow-xl', 'rounded-lg');
+            document.body.appendChild(cursorClone);
+
+            let xTo = gsap.quickTo(cursorClone, "x", { duration: 0.15, ease: "power3.out" }),
+                yTo = gsap.quickTo(cursorClone, "y", { duration: 0.15, ease: "power3.out" });
+
+            window.addEventListener("mousemove", (e) => {
+                if (cursorClone.style.display !== 'none') {
+                    xTo(e.clientX);
+                    yTo(e.clientY);
+                }
+            });
+
+            heroImageHoverArea.addEventListener("mouseenter", (e) => {
+                // Flash Effect on Image
+                // This momentarily increases brightness and then fades back to normal
+                gsap.fromTo(heroImageHoverArea,
+                    { filter: "brightness(1.5) contrast(1.1)" },
+                    { filter: "brightness(1) contrast(1)", duration: 0.8, ease: "power2.out" }
+                );
+
+                // Cursor Effect Enter
+                cursorClone.style.display = 'flex';
+                gsap.set(cursorClone, { x: e.clientX, y: e.clientY, xPercent: -50, yPercent: -50 });
+                gsap.to(cursorClone, { opacity: 1, scale: 1, duration: 0.3 });
+            });
+
+            heroImageHoverArea.addEventListener("mouseleave", () => {
+                // Cursor Effect Leave
+                gsap.to(cursorClone, {
+                    opacity: 0,
+                    scale: 0.9,
+                    duration: 0.3,
+                    onComplete: () => { cursorClone.style.display = 'none'; }
+                });
+            });
+
         });
     </script>
 </body>
