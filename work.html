@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body class="relative">
+    <!-- header start  -->
+    <header class="z-40 lg:px-4 lg:px-12 py-6 bg-gray-200">
+        <div class="container">
+            <div class="flex justify-between items-center w-full">
+                <div id="logoBlock" class="visibility-hidden-on-load flex items-center gap-2.5 bg-white pr-4">
+                    <img class="p-px bg-white" src="assets/images/rifat-logo-img.png" alt="Rifat">
+                    <span class="anton text-black text-2xl font-normal leading-[116.667%] uppercase">Rifat
+                        Hossain</span>
+                </div>
+
+                <button id="desktopMenuBtn"
+                    class="bg-[#FF6200] text-white anton text-[16px] font-normal leading-[100%] uppercase lg:px-6 px-5 lg:py-4 py-4 flex items-center gap-3 btn-box-shadow">
+                    MENU
+                    <div class="flex flex-col gap-1 w-5 hamburger-icon">
+                        <span class="line1 block w-full h-[2px] bg-white transition-transform duration-300"></span>
+                        <span class="line2 block w-full h-[2px] bg-white transition-opacity duration-300"></span>
+                        <span class="line3 block w-full h-[2px] bg-white transition-transform duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- main start  -->
+
+    <main>
+        <section class="bg-gray-200 relative lg:py-[70px]">
+            <div class="container">
+                <div class="flex flex-col gap-4">
+                    <h1 class="lg:text-[96px] text-[64px] font-normal leading-[100%] tracking-[0.96px] uppercase">
+                        Selected <span class="text-primary">Work’s</span></h1>
+                    <p class="lg:text-[20px] text-[16px] font-normal leading-[140%] text-black-3 max-w-[777px]">A few
+                        recent projects
+                        where I improved product clarity, strengthened UI systems, and designed user-friendly
+                        experiences for web and mobile.</p>
+                </div>
+
+
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+    <!-- mobile menu  -->
+
+    <div id="sideMenu"
+        class="fixed inset-y-0 right-0 w-full md:w-[450px] bg-gray-100 shadow-2xl z-50 transform translate-x-full border-l border-gray-200 flex flex-col">
+        <div class="flex justify-between items-center lg:px-8 lg:pt-8 lg:pb-8 p-4">
+            <div class="flex items-center gap-2.5 bg-white pr-4">
+                <img class="p-px bg-white" src="assets/images/rifat-logo-img.png" alt="Rifat">
+                <span class="anton text-black text-2xl font-normal leading-[116.667%] uppercase">Rifat Hossain</span>
+            </div>
+
+            <button id="closeBtn"
+                class="w-12 h-12 bg-gray-400 text-white flex items-center justify-center hover:bg-gray-500 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <nav class="flex flex-col justify-center px-4 lg:px-8 gap-4 mt-8">
+            <div class="nav-item">
+                <a href="#" class="group block">
+                    <h2
+                        class="anton text-gray-400 text-5xl md:text-7xl font-normal leading-[100%] uppercase group-hover:text-[#FF6200] transition-colors duration-200 ease-linear">
+                        Home</h2>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="group block">
+                    <h2
+                        class="anton text-gray-400 text-5xl md:text-7xl font-normal leading-[100%] uppercase group-hover:text-[#FF6200] transition-colors duration-200 ease-linear">
+                        About us</h2>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="group block">
+                    <h2
+                        class="anton text-gray-400 text-5xl md:text-7xl font-normal leading-[100%] uppercase group-hover:text-[#FF6200] transition-colors duration-200 ease-linear">
+                        Project</h2>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#" class="group block">
+                    <h2
+                        class="anton text-gray-400 text-5xl md:text-7xl font-normal leading-[100%] uppercase group-hover:text-[#FF6200] transition-colors duration-200 ease-linear">
+                        Testimonials</h2>
+                </a>
+            </div>
+        </nav>
+
+        <div class="px-4 lg:px-8 pt-8 mb-10">
+            <p class="text-[18px] font-normal leading-[138.889%] text-gray-600">
+                I help startups turn complex ideas into simple, scalable interfaces. From UX flows to polished UI, I
+                deliver designs that ship.
+            </p>
+        </div>
+    </div>
+    <div id="overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity"></div>
+
+
+    <!-- tab section  -->
+    <section class="filterable-projects-section py-20 lg:py-32 bg-[#F9FAFB] overflow-hidden">
+        <div class="container mx-auto px-4 md:px-12 max-w-7xl">
+
+            <div class="flex flex-wrap lg:justify-start justify-center items-center gap-4 mb-12">
+                <button
+                    class="filter-btn active bg-[#FF6200] text-white border border-transparent shadow-[8px_8px_32px_0_rgba(255,98,0,0.25)] px-6 py-4 uppercase text-[16px] font-medium leading-[100%] transition-all duration-300"
+                    data-filter="all">ALL</button>
+                <button
+                    class="filter-btn bg-transparent text-gray-500 border border-[#929292] hover:text-black hover:border-black px-6 py-4 uppercase text-[16px] font-medium leading-[100%] transition-all duration-300"
+                    data-filter="web">WEB DESIGN</button>
+                <button
+                    class="filter-btn bg-transparent text-gray-500 border border-[#929292] hover:text-black hover:border-black px-6 py-4 uppercase text-[16px] font-medium leading-[100%] transition-all duration-300"
+                    data-filter="mobile">MOBILE APP DESIGN</button>
+                <button
+                    class="filter-btn bg-transparent text-gray-500 border border-[#929292] hover:text-black hover:border-black px-6 py-4 uppercase text-[16px] font-medium leading-[100%] transition-all duration-300"
+                    data-filter="branding">BRANDING</button>
+                <button
+                    class="filter-btn bg-transparent text-gray-500 border border-[#929292] hover:text-black hover:border-black px-6 py-4 uppercase text-[16px] font-medium leading-[100%] transition-all duration-300"
+                    data-filter="saas">SAAS DESIGN</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 filter-grid">
+
+                <a href="#" class="project-card flex flex-col gap-5 cursor-pointer group" data-category="web">
+                    <div
+                        class="w-full bg-[#F3F4F6] overflow-hidden rounded-sm group-hover:rounded-[4px] transition-all duration-700 ease-in-out relative aspect-[4/3] md:aspect-[16/11]">
+                        <img src="assets/images/project-img-1.webp" alt="Agency Landing Page"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 will-change-transform">
+                    </div>
+                    <div class="flex flex-col lg:gap-2 gap-4 mt-2 lg:mt-0">
+                        <div class="flex flex-col lg:flex-row justify-between items-start gap-2 lg:gap-4">
+                            <h4 class="anton text-[22px] font-normal leading-[120.833%] uppercase text-black">AGENCY
+                                LANDING PAGE UI/UX DESIGN</h4>
+                            <span
+                                class="text-[#9CA3AF] text-[12px] font-medium tracking-[0.24px] leading-[100%] uppercase whitespace-nowrap mt-1">28
+                                JAN, 2026</span>
+                        </div>
+                        <p class="text-gray-600 text-[15px] font-normal leading-[160%]">
+                            UI/UX design for an agency landing page. Focused on clear layout and visual hierarchy.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card flex flex-col gap-5 cursor-pointer group" data-category="saas">
+                    <div
+                        class="w-full bg-[#F3F4F6] overflow-hidden rounded-sm group-hover:rounded-[4px] transition-all duration-700 ease-in-out relative aspect-[4/3] md:aspect-[16/11]">
+                        <img src="assets/images/project-img-2.webp" alt="Dashboard"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 will-change-transform">
+                    </div>
+                    <div class="flex flex-col lg:gap-2 gap-4 mt-2 lg:mt-0">
+                        <div class="flex flex-col lg:flex-row justify-between items-start gap-2 lg:gap-4">
+                            <h4 class="anton text-[22px] font-normal leading-[120.833%] uppercase text-black">ALLIED |
+                                REAL ESTATE DASHBOARD | UI/UX DESIGN</h4>
+                            <span
+                                class="text-[#9CA3AF] text-[12px] font-medium tracking-[0.24px] leading-[100%] uppercase whitespace-nowrap mt-1">2
+                                JAN, 2026</span>
+                        </div>
+                        <p class="text-gray-600 text-[15px] font-normal leading-[160%]">
+                            Web dashboard interface designed for a real estate platform. Includes data visualization and
+                            layout structure.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card flex flex-col gap-5 cursor-pointer group" data-category="web branding">
+                    <div
+                        class="w-full bg-[#F3F4F6] overflow-hidden rounded-sm group-hover:rounded-[4px] transition-all duration-700 ease-in-out relative aspect-[4/3] md:aspect-[16/11]">
+                        <img src="assets/images/project-img-3.webp" alt="Marketing Agency"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 will-change-transform">
+                    </div>
+                    <div class="flex flex-col lg:gap-2 gap-4 mt-2 lg:mt-0">
+                        <div class="flex flex-col lg:flex-row justify-between items-start gap-2 lg:gap-4">
+                            <h4 class="anton text-[22px] font-normal leading-[120.833%] uppercase text-black">DIGITAL
+                                MARKETING AGENCY WEBSITE UI/UX DESIGN</h4>
+                            <span
+                                class="text-[#9CA3AF] text-[12px] font-medium tracking-[0.24px] leading-[100%] uppercase whitespace-nowrap mt-1">13
+                                JAN, 2026</span>
+                        </div>
+                        <p class="text-gray-600 text-[15px] font-normal leading-[160%]">
+                            Website UI design for a digital marketing agency. Focused on corporate branding and
+                            responsive web layout.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card flex flex-col gap-5 cursor-pointer group" data-category="web">
+                    <div
+                        class="w-full bg-[#F3F4F6] overflow-hidden rounded-sm group-hover:rounded-[4px] transition-all duration-700 ease-in-out relative aspect-[4/3] md:aspect-[16/11]">
+                        <img src="assets/images/project-img-4.webp" alt="Flight Booking"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 will-change-transform">
+                    </div>
+                    <div class="flex flex-col lg:gap-2 gap-4 mt-2 lg:mt-0">
+                        <div class="flex flex-col lg:flex-row justify-between items-start gap-2 lg:gap-4">
+                            <h4 class="anton text-[22px] font-normal leading-[120.833%] uppercase text-black">FLIGHT
+                                EXPERT - FLIGHT BOOKING WEBSITE</h4>
+                            <span
+                                class="text-[#9CA3AF] text-[12px] font-medium tracking-[0.24px] leading-[100%] uppercase whitespace-nowrap mt-1">4
+                                DEC, 2026</span>
+                        </div>
+                        <p class="text-gray-600 text-[15px] font-normal leading-[160%]">
+                            UI/UX design for a flight booking platform. Includes search flow and web interface design.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card flex flex-col gap-5 cursor-pointer group" data-category="web branding">
+                    <div
+                        class="w-full bg-[#F3F4F6] overflow-hidden rounded-sm group-hover:rounded-[4px] transition-all duration-700 ease-in-out relative aspect-[4/3] md:aspect-[16/11]">
+                        <img src="assets/images/project-img-5.webp" alt="CFOOD Restaurant"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 will-change-transform">
+                    </div>
+                    <div class="flex flex-col lg:gap-2 gap-4 mt-2 lg:mt-0">
+                        <div class="flex flex-col lg:flex-row justify-between items-start gap-2 lg:gap-4">
+                            <h4 class="anton text-[22px] font-normal leading-[120.833%] uppercase text-black">C'FOOD -
+                                RESTAURANT LANDING PAGE</h4>
+                            <span
+                                class="text-[#9CA3AF] text-[12px] font-medium tracking-[0.24px] leading-[100%] uppercase whitespace-nowrap mt-1">23
+                                MAY, 2023</span>
+                        </div>
+                        <p class="text-gray-600 text-[15px] font-normal leading-[160%]">
+                            Landing page design for a restaurant. Includes web layout, image placement, and UI elements.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card flex flex-col gap-5 cursor-pointer group" data-category="mobile saas">
+                    <div
+                        class="w-full bg-[#F3F4F6] overflow-hidden rounded-sm group-hover:rounded-[4px] transition-all duration-700 ease-in-out relative aspect-[4/3] md:aspect-[16/11]">
+                        <img src="assets/images/project-img-5.webp" alt="Therapy App"
+                            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 will-change-transform">
+                    </div>
+                    <div class="flex flex-col lg:gap-2 gap-4 mt-2 lg:mt-0">
+                        <div class="flex flex-col lg:flex-row justify-between items-start gap-2 lg:gap-4">
+                            <h4 class="anton text-[22px] font-normal leading-[120.833%] uppercase text-black">NEURO GLOW
+                                - KETAMINE THERAPY APP DESIGN</h4>
+                            <span
+                                class="text-[#9CA3AF] text-[12px] font-medium tracking-[0.24px] leading-[100%] uppercase whitespace-nowrap mt-1">8
+                                MAR, 2022</span>
+                        </div>
+                        <p class="text-gray-600 text-[15px] font-normal leading-[160%]">
+                            Website UI design for a therapy clinic. Focused on clean layout and clear information
+                            architecture.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- testimonial section  -->
+    <section class="testimonials-section section-padding overflow-hidden bg-[#F8F8F8]">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 justify-between items-end gap-4 lg:gap-0 lg:pb-12 pb-8">
+                <div>
+                    <h2 class="anton text-[56px] md:text-[72px] lg:text-[86px] leading-[0.9] uppercase text-[#111827]">
+                        <span
+                            class="testimonial-text-anim block lg:text-8xl font-normal leading-[100%] uppercase text-black-2">WHAT</span>
+                        <span class="testimonial-text-anim blocklg:text-8xl font-normal leading-[100%] uppercase"><span
+                                class="text-primary">CLIENTS</span> SAY</span>
+                    </h2>
+                </div>
+
+                <div class="flex lg:justify-end">
+                    <p
+                        class="testimonial-text-anim lg:text-[20px] font-normal leading-[140%] text-gray-600 max-w-[420px] lg:text-right">
+                        A few words from teams I've supported with UI/UX design, design systems, and product
+                        improvements.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full overflow-hidden relative">
+
+            <div class="animate-marquee gap-6 px-4 md:px-12">
+
+                <div class="testimonial-card bg-white lg:p-6 p-4 flex flex-col lg:min-w-[487px] h-auto">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2.5">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/slider-img-1.png" alt="Client" class="w-12 h-12 ">
+                            <div>
+                                <p class="text-[20px] font-bold leading-[120%] uppercase">ELEANOR PENA</p>
+                                <p class="text-[16px] font-normal leading-[120%] text-black mt-[6px]">Project Lead</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#D1D5DB" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-gray-200 lg:my-6 my-4"></div>
+                    <p class="text-[20px] font-bold leading-[120%] text-black-3 pb-2">"Rifat brought clarity to our
+                        product
+                        fast."
+                    </p>
+                    <p class="text-[20px] font-normal leading-[140%] text-gray-500">Rifat gave structured updates,
+                        handled feedback
+                        well, and kept the whole experience professional from start to finish.</p>
+                </div>
+                <div class="testimonial-card bg-white lg:p-6 p-4 flex flex-col lg:min-w-[487px] h-auto">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2.5">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/slider-img-2.png" alt="Client" class="w-12 h-12 ">
+                            <div>
+                                <p class="text-[20px] font-bold leading-[120%] uppercase">Ronald Richards</p>
+                                <p class="text-[16px] font-normal leading-[120%] text-black mt-[6px]">Growth Lead</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#D1D5DB" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-gray-200 lg:my-6 my-4"></div>
+                    <p class="text-[20px] font-bold leading-[120%] text-black-3 pb-2">“We saw immediate improvements
+                        after
+                        the redesign.”
+                    </p>
+                    <p class="text-[20px] font-normal leading-[140%] text-gray-500">Navigation became simpler, the
+                        interface felt modern, and users understood key actions much faster.</p>
+                </div>
+                <div class="testimonial-card bg-white lg:p-6 p-4 flex flex-col lg:min-w-[487px] h-auto">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2.5">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/slider-img-3.png" alt="Client" class="w-12 h-12 ">
+                            <div>
+                                <p class="text-[20px] font-bold leading-[120%] uppercase">Annette Black</p>
+                                <p class="text-[16px] font-normal leading-[120%] text-black mt-[6px]">Engineering
+                                    Manager</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#D1D5DB" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-gray-200 lg:my-6 my-4"></div>
+                    <p class="text-[20px] font-bold leading-[120%] text-black-3 pb-2">“Exactly what we needed for a
+                        dev-ready handoff.”
+                    </p>
+                    <p class="text-[20px] font-normal leading-[140%] text-gray-500">Clean components, proper spacing
+                        rules, and clear specs. Our engineering team loved the organization.</p>
+                </div>
+                <div class="testimonial-card bg-white lg:p-6 p-4 flex flex-col lg:min-w-[487px] h-auto">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2.5">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/slider-img-1.png" alt="Client" class="w-12 h-12 ">
+                            <div>
+                                <p class="text-[20px] font-bold leading-[120%] uppercase">ELEANOR PENA</p>
+                                <p class="text-[16px] font-normal leading-[120%] text-black mt-[6px]">Project Lead</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#D1D5DB" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-gray-200 lg:my-6 my-4"></div>
+                    <p class="text-[20px] font-bold leading-[120%] text-black-3 pb-2">"Rifat brought clarity to our
+                        product
+                        fast."
+                    </p>
+                    <p class="text-[20px] font-normal leading-[140%] text-gray-500">Rifat gave structured updates,
+                        handled feedback
+                        well, and kept the whole experience professional from start to finish.</p>
+                </div>
+                <div class="testimonial-card bg-white lg:p-6 p-4 flex flex-col lg:min-w-[487px] h-auto">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2.5">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/slider-img-1.png" alt="Client" class="w-12 h-12 ">
+                            <div>
+                                <p class="text-[20px] font-bold leading-[120%] uppercase">ELEANOR PENA</p>
+                                <p class="text-[16px] font-normal leading-[120%] text-black mt-[6px]">Project Lead</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#D1D5DB" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-gray-200 lg:my-6 my-4"></div>
+                    <p class="text-[20px] font-bold leading-[120%] text-black-3 pb-2">"Rifat brought clarity to our
+                        product
+                        fast."
+                    </p>
+                    <p class="text-[20px] font-normal leading-[140%] text-gray-500">Rifat gave structured updates,
+                        handled feedback
+                        well, and kept the whole experience professional from start to finish.</p>
+                </div>
+                <div class="testimonial-card bg-white lg:p-6 p-4 flex flex-col lg:min-w-[487px] h-auto">
+                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-2.5">
+                        <div class="flex items-center gap-4">
+                            <img src="assets/images/slider-img-1.png" alt="Client" class="w-12 h-12 ">
+                            <div>
+                                <p class="text-[20px] font-bold leading-[120%] uppercase">ELEANOR PENA</p>
+                                <p class="text-[16px] font-normal leading-[120%] text-black mt-[6px]">Project Lead</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#FF6200" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29"
+                                fill="none">
+                                <path
+                                    d="M15.2169 0L18.8091 11.0557H30.4338L21.0293 17.8885L24.6215 28.9443L15.2169 22.1115L5.81236 28.9443L9.40458 17.8885L1.43051e-05 11.0557H11.6247L15.2169 0Z"
+                                    fill="#D1D5DB" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-full h-px bg-gray-200 lg:my-6 my-4"></div>
+                    <p class="text-[20px] font-bold leading-[120%] text-black pb-2">"Rifat brought clarity to our
+                        product
+                        fast."
+                    </p>
+                    <p class="text-[20px] font-normal leading-[140%] text-gray-500">Rifat gave structured updates,
+                        handled feedback
+                        well, and kept the whole experience professional from start to finish.</p>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section  -->
+    <footer class="bg-white overflow-hidden py-[56px]">
+        <div class="container">
+            <div class="footer-anim flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+                <div
+                    class="flex items-center gap-6 md:gap-10 text-[16px] md:text-[18px] font-medium text-[#4B5563] lg:order-1 order-2">
+                    <a href="#"
+                        class="hover:text-[#FF6200] transition-colors text-[20px] font-medium leading-[100%] text-black-3">Home</a>
+                    <a href="#"
+                        class="hover:text-[#FF6200] transition-colors text-[20px] font-medium leading-[100%] text-black-3">About</a>
+                    <a href="#"
+                        class="hover:text-[#FF6200] transition-colors text-[20px] font-medium leading-[100%] text-black-3">Services</a>
+                </div>
+
+                <img src="assets/images/footer-rifat.png" alt="Rifat Hossain"
+                    class="w-14 h-14 md:w-16 md:h-16 object-cover bg-gray-200 mx-2 lg:order-2 order-1">
+
+                <div
+                    class="flex items-center gap-6 md:gap-10 text-[16px] md:text-[18px] font-medium text-[#4B5563] lg:order-3 order-3">
+                    <a href="#"
+                        class="hover:text-[#FF6200] transition-colors text-[20px] font-medium leading-[100%] text-black-3">Works</a>
+                    <a href="#"
+                        class="hover:text-[#FF6200] transition-colors text-[20px] font-medium leading-[100%] text-black-3">Testimonials</a>
+                    <a href="#"
+                        class="hover:text-[#FF6200] transition-colors text-[20px] font-medium leading-[100%] text-black-3">Awards</a>
+                </div>
+            </div>
+
+            <div class="footer-anim mt-[40px] text-center">
+                <p class="lg:text-[20px] text-[16px] font-medium leading-[100%] text-black-3">Have a project in mind and
+                    want to
+                    discuss?</p>
+            </div>
+
+            <div class="footer-anim mt-[40px] flex justify-center items-center gap-6">
+                <a href="#" class="text-[#111827]">
+                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.7135 1.72471C17.0492 2.03133 16.3481 2.22296 15.61 2.33794C16.3481 1.87802 16.9385 1.14981 17.1969 0.268289C16.4957 0.689885 15.7207 0.9965 14.872 1.18813C14.2077 0.459923 13.2482 0 12.2149 0C10.2222 0 8.59843 1.68638 8.59843 3.75604C8.59843 4.06265 8.63533 4.33094 8.70914 4.59923C5.71999 4.44592 3.02606 2.95117 1.2178 0.651558C0.922578 1.22646 0.738063 1.83969 0.738063 2.52958C0.738063 3.83269 1.36542 4.9825 2.3618 5.67238C1.77135 5.63406 1.2178 5.48075 0.70116 5.21246V5.25079C0.70116 7.09048 1.95587 8.62356 3.61651 8.9685C3.32128 9.04515 2.98915 9.08348 2.65703 9.08348C2.43561 9.08348 2.17728 9.04515 1.95587 9.00683C2.43561 10.5016 3.76412 11.6131 5.35095 11.6131C4.09625 12.6096 2.54632 13.2228 0.848772 13.2228C0.553547 13.2228 0.258322 13.2228 0 13.1845C1.62374 14.2576 3.5058 14.8708 5.57237 14.8708C12.2518 14.8708 15.9053 9.12181 15.9053 4.13931C15.9053 3.986 15.9053 3.79437 15.9053 3.64106C16.6064 3.14281 17.2338 2.49125 17.7135 1.72471Z"
+                            fill="#27272A" />
+                    </svg>
+
+
+                </a>
+                <a href="#" class="text-[#111827]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.62806 1.80182C12.1988 1.80182 12.5032 1.81182 13.5187 1.85991C14.1293 1.86767 14.7341 1.98412 15.3068 2.20418C15.7221 2.37053 16.0993 2.62535 16.414 2.95224C16.7288 3.27913 16.9741 3.67085 17.1343 4.10219C17.3462 4.69697 17.4583 5.32509 17.4658 5.95924C17.5116 7.01395 17.5217 7.33013 17.5217 10C17.5217 12.6699 17.5121 12.986 17.4658 14.0408C17.4583 14.6749 17.3462 15.303 17.1343 15.8978C16.9741 16.3291 16.7288 16.7209 16.414 17.0478C16.0993 17.3747 15.7221 17.6295 15.3068 17.7958C14.7341 18.0159 14.1293 18.1323 13.5187 18.1401C12.5036 18.1877 12.1992 18.1982 9.62806 18.1982C7.05691 18.1982 6.75248 18.1882 5.73741 18.1401C5.12682 18.1323 4.52203 18.0159 3.94934 17.7958C3.53403 17.6295 3.15686 17.3747 2.84211 17.0478C2.52736 16.7209 2.28201 16.3291 2.12184 15.8978C1.90995 15.303 1.79783 14.6749 1.79036 14.0408C1.74451 12.986 1.73443 12.6699 1.73443 10C1.73443 7.33013 1.74405 7.01395 1.79036 5.95924C1.79783 5.32509 1.90995 4.69697 2.12184 4.10219C2.28201 3.67085 2.52736 3.27913 2.84211 2.95224C3.15686 2.62535 3.53403 2.37053 3.94934 2.20418C4.52203 1.98412 5.12682 1.86767 5.73741 1.85991C6.75294 1.81229 7.05737 1.80182 9.62806 1.80182ZM9.62806 0C7.01473 0 6.68554 0.011428 5.65855 0.0599971C4.85944 0.0765049 4.06882 0.233646 3.3203 0.524737C2.6782 0.775994 2.09662 1.16974 1.61614 1.67849C1.12584 2.17769 0.746401 2.78206 0.504327 3.44936C0.22405 4.22675 0.0727459 5.04788 0.0568514 5.87782C0.0110035 6.94348 0 7.28537 0 9.99952C0 12.7137 0.0110035 13.0556 0.0577683 14.1222C0.0736628 14.9521 0.224967 15.7733 0.505244 16.5506C0.74705 17.2179 1.12617 17.8222 1.61614 18.3215C2.09689 18.8304 2.67879 19.2241 3.32122 19.4753C4.06973 19.7664 4.86036 19.9235 5.65946 19.94C6.68646 19.9876 7.01427 20 9.62898 20C12.2437 20 12.5715 19.9886 13.5985 19.94C14.3976 19.9235 15.1882 19.7664 15.9367 19.4753C16.5761 19.2179 17.1567 18.8247 17.6415 18.3209C18.1262 17.8172 18.5044 17.2139 18.7518 16.5497C19.0321 15.7723 19.1834 14.9512 19.1993 14.1212C19.2451 13.0556 19.2561 12.7137 19.2561 9.99952C19.2561 7.28537 19.2451 6.94348 19.1984 5.87686C19.1825 5.04693 19.0312 4.2258 18.7509 3.44841C18.5091 2.78119 18.1299 2.17684 17.64 1.67754C17.1592 1.16867 16.5773 0.774919 15.9349 0.523785C15.1864 0.232694 14.3958 0.0755526 13.5967 0.0590448C12.5706 0.0114281 12.2414 0 9.62806 0Z"
+                            fill="#27272A" />
+                        <path
+                            d="M9.6249 4.86426C8.64703 4.86426 7.69111 5.16542 6.87803 5.72966C6.06496 6.2939 5.43124 7.09588 5.05702 8.03417C4.68281 8.97247 4.58489 10.0049 4.77567 11.001C4.96644 11.9971 5.43734 12.9121 6.1288 13.6302C6.82026 14.3484 7.70124 14.8374 8.66033 15.0356C9.61942 15.2337 10.6135 15.132 11.517 14.7434C12.4204 14.3547 13.1926 13.6965 13.7359 12.8521C14.2792 12.0077 14.5691 11.0149 14.5691 9.99925C14.5691 8.63737 14.0482 7.33126 13.121 6.36826C12.1938 5.40527 10.9362 4.86426 9.6249 4.86426ZM9.6249 13.3324C8.99015 13.3324 8.36966 13.1369 7.84188 12.7707C7.31411 12.4044 6.90276 11.8839 6.65985 11.2748C6.41694 10.6657 6.35338 9.99555 6.47722 9.34898C6.60105 8.70241 6.90671 8.10849 7.35555 7.64234C7.80438 7.17619 8.37624 6.85873 8.99879 6.73012C9.62134 6.60151 10.2666 6.66752 10.8531 6.9198C11.4395 7.17208 11.9407 7.5993 12.2934 8.14744C12.646 8.69558 12.8343 9.34001 12.8343 9.99925C12.8343 10.8833 12.4961 11.7311 11.8943 12.3562C11.2924 12.9813 10.4761 13.3324 9.6249 13.3324Z"
+                            fill="#27272A" />
+                        <path
+                            d="M14.7678 5.8618C15.4059 5.8618 15.9232 5.32457 15.9232 4.66186C15.9232 3.99915 15.4059 3.46191 14.7678 3.46191C14.1297 3.46191 13.6124 3.99915 13.6124 4.66186C13.6124 5.32457 14.1297 5.8618 14.7678 5.8618Z"
+                            fill="#27272A" />
+                    </svg>
+
+
+
+                </a>
+                <a href="#" class="text-[#111827]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.8681 2C6.39952 2 2 6.56926 2 12.2488C2 16.7754 4.83707 20.6187 8.74319 21.9852C9.2366 22.0706 9.40106 21.7717 9.40106 21.4727C9.40106 21.2165 9.40106 20.576 9.40106 19.7219C6.64622 20.3625 6.07058 18.3554 6.07058 18.3554C5.6183 17.1597 4.96043 16.8608 4.96043 16.8608C4.05585 16.2202 5.04266 16.2202 5.04266 16.2202C6.02947 16.3056 6.56399 17.2878 6.56399 17.2878C7.42745 18.8678 8.86654 18.3981 9.44218 18.1419C9.52442 17.4586 9.77112 17.0316 10.0589 16.7754C7.87973 16.5192 5.57718 15.6224 5.57718 11.6937C5.57718 10.5834 5.94723 9.64391 6.60511 8.96065C6.52287 8.70443 6.15282 7.67955 6.68734 6.22764C6.68734 6.22764 7.50968 5.97142 9.40106 7.29522C10.1823 7.0817 11.0457 6.95359 11.8681 6.95359C12.6904 6.95359 13.5539 7.0817 14.3351 7.29522C16.2265 5.97142 17.0488 6.22764 17.0488 6.22764C17.5834 7.63685 17.2544 8.66173 17.1311 8.96065C17.7478 9.68661 18.159 10.5834 18.159 11.6937C18.159 15.6224 15.8564 16.4764 13.6361 16.7327C14.0062 17.0316 14.294 17.6721 14.294 18.6116C14.294 19.9781 14.294 21.0884 14.294 21.43C14.294 21.6863 14.4585 22.0279 14.993 21.9425C18.8991 20.6187 21.7362 16.7754 21.7362 12.2488C21.7362 6.56926 17.3366 2 11.8681 2Z"
+                            fill="#27272A" />
+                    </svg>
+
+
+
+                </a>
+                <a href="#" class="text-[#111827]">
+                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.95601 20V10.8771H0V7.32167H2.95601V4.69968C2.95601 1.65687 4.74542 0 7.35898 0C8.6109 0 9.68686 0.0968046 10.0004 0.140073V3.31999L8.18778 3.32084C6.76638 3.32084 6.49116 4.02233 6.49116 5.05171V7.32167H9.88107L9.43969 10.8771H6.49116V20H2.95601Z"
+                            fill="#18181B" />
+                    </svg>
+
+
+
+                </a>
+                <a href="#" class="text-[#111827]">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.6592 4.98038C17.7649 3.44836 16.5519 2.23536 15.0199 1.34115C13.4875 0.44699 11.8148 0 10.0003 0C8.18602 0 6.51276 0.44699 4.9807 1.34115C3.44854 2.23523 2.23554 3.44822 1.34129 4.98038C0.44699 6.51262 0 8.18588 0 10C0 11.8143 0.447127 13.4872 1.34115 15.0196C2.23536 16.5516 3.44836 17.7646 4.98052 18.6589C6.51276 19.553 8.18588 20 10.0001 20C11.8143 20 13.4877 19.553 15.0198 18.6589C16.5519 17.7649 17.7648 16.5516 18.659 15.0196C19.553 13.4874 20 11.8142 20 10C20 8.1857 19.553 6.51239 18.6592 4.98038ZM10.0002 1.45836C12.1528 1.45836 14.0322 2.17014 15.6381 3.59366L15.4753 3.82138C15.4102 3.91268 15.2475 4.08827 14.9872 4.34882C14.7268 4.60914 14.4425 4.85669 14.1344 5.09102C13.826 5.32544 13.4074 5.59233 12.8777 5.89183C12.3481 6.19132 11.7839 6.45406 11.1849 6.67973C10.1867 4.83927 9.11909 3.18129 7.98189 1.70569C8.66776 1.54077 9.34046 1.45836 10.0002 1.45836ZM3.30757 4.70022C4.14085 3.65008 5.15633 2.84266 6.35437 2.27851C7.43073 3.71078 8.48967 5.35152 9.53142 7.20042C6.89253 7.89487 4.26239 8.24212 1.64083 8.24198C1.91876 6.93129 2.4743 5.75058 3.30757 4.70022ZM2.03132 13.0797C1.64932 12.1032 1.45836 11.0765 1.45836 10C1.45836 9.87844 1.46283 9.78727 1.47141 9.72657C4.61393 9.72657 7.53503 9.32304 10.2347 8.51557C10.5125 9.05373 10.7425 9.53552 10.9248 9.96098C10.8897 9.97831 10.8337 9.99774 10.7555 10.0195C10.6771 10.0412 10.6208 10.0563 10.5858 10.0651L10.1041 10.2343C9.77413 10.3559 9.34215 10.5643 8.80851 10.8593C8.27473 11.1547 7.70834 11.506 7.10934 11.9141C6.51034 12.3223 5.89183 12.8626 5.25388 13.5356C4.61584 14.2083 4.07983 14.9307 3.64579 15.7033C2.95134 14.9307 2.41323 14.056 2.03132 13.0797ZM10.0002 18.5418C7.96884 18.5418 6.15461 17.8907 4.55733 16.5887L4.75266 16.732C5.05645 16.0634 5.50344 15.421 6.09386 14.8048C6.6842 14.1886 7.25273 13.6914 7.7996 13.3137C8.34647 12.9364 8.94104 12.5805 9.5835 12.2459C10.2258 11.9119 10.664 11.699 10.8986 11.6082C11.133 11.517 11.3197 11.4453 11.4585 11.3931L11.4844 11.38H11.5107C12.3611 13.6109 12.969 15.7725 13.3335 17.8645C12.257 18.3161 11.1461 18.5417 10.0002 18.5418ZM17.188 14.616C16.5456 15.61 15.7425 16.4327 14.7792 17.0835C14.423 15.087 13.8678 13.0512 13.1124 10.9766C14.8398 10.7072 16.6149 10.8333 18.4379 11.354C18.2468 12.5346 17.8301 13.6221 17.188 14.616ZM18.4117 9.88286C18.3249 9.86562 18.2162 9.84592 18.0861 9.82435C17.9559 9.80277 17.7973 9.7766 17.6107 9.74622C17.4243 9.71585 17.2156 9.68771 16.9858 9.66162C16.7557 9.63558 16.5105 9.61177 16.2499 9.59007C15.9895 9.56826 15.7117 9.55107 15.4167 9.53794C15.1212 9.52498 14.8219 9.51842 14.518 9.51842C14.2145 9.51842 13.8952 9.52722 13.5612 9.54446C13.2271 9.56156 12.9038 9.5923 12.5913 9.63563C12.5651 9.59216 12.5326 9.52052 12.4936 9.42064C12.4546 9.3209 12.4262 9.24482 12.4093 9.19274C12.2442 8.82816 12.0531 8.41579 11.8359 7.95584C12.4349 7.71262 13.0058 7.43278 13.5487 7.11586C14.091 6.79894 14.5247 6.517 14.8505 6.26963C15.1761 6.02199 15.4842 5.75938 15.7749 5.48169C16.0658 5.20394 16.2544 5.01089 16.3415 4.90234C16.4284 4.79362 16.5108 4.68736 16.5889 4.58333L16.6019 4.57019C17.8693 6.11534 18.5162 7.89478 18.542 9.90886L18.4117 9.88286Z"
+                            fill="black" />
+                    </svg>
+
+
+
+                </a>
+                <a href="#" class="text-[#111827]">
+                    <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.05099 6.21551C9.50753 5.98587 9.85268 5.7301 10.0892 5.4537C10.51 4.95591 10.7176 4.29585 10.7176 3.47766C10.7176 2.68147 10.51 2.00079 10.0947 1.43012C9.40165 0.500541 8.22867 0.024752 6.57029 0H0V13.4115H6.12613C6.81643 13.4115 7.45586 13.3523 8.04716 13.2313C8.63846 13.1089 9.15 12.8848 9.58316 12.5575C9.96819 12.2729 10.29 11.9195 10.5457 11.5028C10.95 10.873 11.1522 10.1593 11.1522 9.36452C11.1522 8.59445 10.9748 7.93853 10.6227 7.39948C10.2666 6.86044 9.74405 6.46578 9.05099 6.21551ZM2.71035 2.32944H5.66959C6.32002 2.32944 6.85631 2.39957 7.2771 2.53846C7.76389 2.7406 8.00728 3.15176 8.00728 3.77881C8.00728 4.34123 7.82164 4.73451 7.45449 4.95591C7.08458 5.1773 6.60467 5.28868 6.01612 5.28868H2.71035V2.32944ZM7.38986 10.8483C7.06258 11.0064 6.60192 11.0848 6.01199 11.0848H2.71035V7.50812H6.05737C6.64042 7.51224 7.09421 7.58925 7.41873 7.73363C7.99628 7.9949 8.28368 8.47344 8.28368 9.17338C8.28368 9.99844 7.98666 10.554 7.38986 10.8483Z"
+                            fill="black" />
+                        <path d="M19.8854 0.625977H14.0591V2.29536H19.8854V0.625977Z" fill="black" />
+                        <path
+                            d="M21.9097 7.21378C21.7887 6.43684 21.5219 5.75341 21.1066 5.16349C20.6514 4.49518 20.0739 4.00564 19.3712 3.69624C18.6713 3.38547 17.8833 3.23008 17.006 3.23145C15.5333 3.23145 14.3369 3.69212 13.4115 4.60657C12.4888 5.52377 12.0267 6.8425 12.0267 8.56139C12.0267 10.3944 12.5369 11.7187 13.5627 12.5313C14.5844 13.3454 15.7643 13.7511 17.1036 13.7511C18.7249 13.7511 19.9859 13.2684 20.8866 12.3058C21.4628 11.698 21.7887 11.0998 21.8602 10.5127H19.1759C19.0206 10.8028 18.8404 11.0297 18.6341 11.1947C18.2601 11.4973 17.7733 11.6485 17.1765 11.6485C16.6086 11.6485 16.1273 11.5234 15.7258 11.2745C15.063 10.8757 14.7165 10.1771 14.6725 9.18294H21.9977C22.0087 8.32625 21.9812 7.66757 21.9097 7.21378ZM14.7385 7.47093C14.8347 6.826 15.0685 6.31446 15.4398 5.9363C15.811 5.55952 16.3363 5.36975 17.0088 5.36838C17.6289 5.36838 18.1474 5.54577 18.5695 5.90192C18.9862 6.26083 19.2213 6.782 19.2695 7.47093H14.7385Z"
+                            fill="black" />
+                    </svg>
+
+
+
+
+                </a>
+            </div>
+
+            <div class="footer-anim mt-[40px] w-full border-t-2 border-dashed border-gray-200"></div>
+
+            <div class="footer-anim mt-[40px] text-center">
+                <p class="text-[20px] font-normal leading-[100%] text-gray-600">Copyright 2026. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

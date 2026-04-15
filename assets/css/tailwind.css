@@ -229,3 +229,47 @@ table {
 .icon-float {
     animation: float-icon 3s ease-in-out infinite;
 }
+
+
+/* testimonial  */
+/* মারকিউ স্লাইডারের ইনফিনিট অ্যানিমেশন */
+
+/*  */
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* 50% ট্রান্সলেট এবং 12px (24px গ্যাপের অর্ধেক) মাইনাস করে নিখুঁত লুপ তৈরি করা হয়েছে */
+        transform: translateX(calc(-50% - 12px));
+    }
+}
+
+
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    /* স্পিড কমানো বা বাড়ানোর জন্য 30s পরিবর্তন করতে পারেন */
+    animation: scroll-marquee 30s linear infinite;
+}
+
+/* হোভার করলে স্লাইডার থেমে যাবে যাতে পড়া যায় */
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* কার্ডের নির্দিষ্ট সাইজ ফিক্স রাখা */
+.testimonial-card {
+    width: 380px;
+    /* ডেস্কটপের জন্য স্ট্যান্ডার্ড কার্ড উইডথ */
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 320px;
+        /* মোবাইলের জন্য উইডথ */
+    }
+}
