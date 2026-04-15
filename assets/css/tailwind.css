@@ -213,3 +213,19 @@ table {
 .visibility-hidden-on-load {
     visibility: hidden;
 }
+
+@keyframes float-icon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.icon-float {
+    animation: float-icon 3s ease-in-out infinite;
+}
