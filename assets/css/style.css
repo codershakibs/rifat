@@ -1183,11 +1183,6 @@
       margin-inline: calc(var(--spacing) * 4);
     }
   }
-  .lg\:mx-10 {
-    @media (width >= 64rem) {
-      margin-inline: calc(var(--spacing) * 10);
-    }
-  }
   .lg\:my-6 {
     @media (width >= 64rem) {
       margin-block: calc(var(--spacing) * 6);
@@ -1611,14 +1606,6 @@ html.lenis, html.lenis body {
   padding-top: 140px;
 }
 @media (max-width:640px) {
-  .section-padding {
-    padding-block: 40px;
-  }
-  .section-padding-top {
-    padding-top: 40px;
-  }
-}
-@media (min-width:640px) {
   .section-padding {
     padding-block: 40px;
   }
