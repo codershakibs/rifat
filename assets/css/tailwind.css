@@ -75,17 +75,36 @@ html.lenis body {
     padding-block: 140px;
 }
 
-@media (max-width:1024px) {
-    .section-padding {
-        padding-block: 56px;
-    }
+.section-padding-top {
+    padding-top: 140px;
 }
+
+
+
 
 @media (max-width:640px) {
     .section-padding {
-        padding-block: 56px;
+        padding-block: 40px;
     }
+
+    .section-padding-top {
+        padding-top: 40px;
+    }
+
 }
+
+@media (min-width:640px) {
+    .section-padding {
+        padding-block: 40px;
+    }
+
+    .section-padding-top {
+        padding-top: 40px;
+    }
+
+}
+
+
 
 
 
@@ -272,4 +291,29 @@ table {
         width: 320px;
         /* মোবাইলের জন্য উইডথ */
     }
+}
+
+
+
+
+/* The container that holds both texts */
+.text-roller {
+    display: flex;
+    flex-direction: column;
+    transition: margin-top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Smooth, physical easing */
+    margin-top: 0;
+    /* Initial position */
+}
+
+/* On hover, push the first text up by exactly its height (16px) */
+.group:hover .text-roller {
+    margin-top: -16px;
+}
+
+/* Ensure texts are exactly 16px high to match the container */
+.text-roller span {
+    height: 16px;
+    line-height: 16px;
+    display: block;
 }
